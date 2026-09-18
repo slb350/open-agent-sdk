@@ -208,7 +208,7 @@ All OpenAI-compatible endpoints:
 
 - TDD: Write failing tests first, implement, refactor
 - All 147 tests must pass before committing (147 tests collected; run `pytest tests/` to verify)
-- Run `ruff check` and `black` before committing; install pre-commit first (`pip install pre-commit`), then `pre-commit install` once after cloning to enable the pre-commit hooks (whitespace checks + full test suite via `./venv/bin/pytest`)
+- Run `ruff check` and `black` before committing; install pre-commit first (`pip install pre-commit` — not included in the `[dev]` extras, must be installed separately), then `pre-commit install` once after cloning to enable the pre-commit hooks (whitespace checks + full test suite via `./venv/bin/pytest`)
 - No breaking changes to `AgentOptions` field order (positional arg compatibility)
 - Manual mode (`auto_execute_tools=False`) must remain the default (backwards compat)
 - `add_tool_result()` is async — always `await` it; accepts an optional `name` keyword arg: `await client.add_tool_result(tool_id, result, name="my_tool")` (some providers use `name` to associate results)
