@@ -312,7 +312,7 @@ def load_config_file(config_path: Optional[Path] = None) -> dict:
             - No config file found in search paths
             - PyYAML package not installed (optional dependency)
             - Config file exists but is empty
-            - Config file has invalid YAML (returns {}, doesn't raise)
+            - Config file has invalid YAML (raises yaml.YAMLError — fail fast)
 
     Config File Format (YAML):
         ```yaml
