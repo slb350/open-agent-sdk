@@ -1052,7 +1052,7 @@ Add `-k` or a specific path when you want to target a subset of the unit tests (
 Install hooks once per clone:
 
 ```bash
-pip install pre-commit
+pip install pre-commit   # not included in [dev] extras — install separately
 pre-commit install
 ```
 
